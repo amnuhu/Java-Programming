@@ -9,7 +9,16 @@ public abstract class Trade {
     private int quantity;
     private double price;
 
+    public Trade(String id, String symbol, int quantity) {
+        this(id,symbol, quantity,0.0);
+    }
 
+    public Trade(String id, String symbol, int quantity, double price) {
+        this.id = id;
+        this.symbol = symbol;
+        this.quantity = quantity;
+        this.price = price;
+    }
     public void setPrice(double price) {
         if (price < 0) {
             System.out.println("Price can only take positive integers");
@@ -17,6 +26,7 @@ public abstract class Trade {
         }
         this.price = price;
     }
+
 
     public double getPrice() {
         return price;

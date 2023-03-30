@@ -2,13 +2,21 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Trade trade = new Trade("ID1","ABC",20,20.023);
-        trade.setPrice(-20.12);
-        System.out.println(trade);
+        Client client = new Client("A","B");
+        System.out.println(client);
 
-        Account account = new Account();
-        Trader trader = new Trader("Majid", account);
-        trader.addTrade(25.24,2);
-        System.out.println(account.getTotalTrades());
+        Client newClient = new Client("GGGG","ghak");
+        newClient.addTradePoint();
+        System.out.println(newClient);
+
+        for (int i = 0; i < 12; ++i) {
+            newClient.addTradePoint();
+        }
+        System.out.println(newClient);
+
+        for (int i = 0; i < 50; ++i) {
+            newClient.addTradePoint();
+        }
+        System.out.println(newClient);
     }
 }
