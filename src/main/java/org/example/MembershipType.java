@@ -1,4 +1,6 @@
 package org.example;
 
-public class MembershipType {
+public class MembershipType  {
+
+    public String name = "default";
 }

@@ -2,7 +2,8 @@ package org.example;
 
 public class Gold extends MembershipType{
 
-    public String toString() {
-        return " Membership Gold";
-    }
+    public static String name = "Gold";
+    public static int tradePerDay = 20;
+
+
 }

@@ -15,8 +15,6 @@ public abstract class Trade {
     private LocalTime tradeTime;
     private LocalDate tradeDate;
 
-
-
     public Trade(String id, String symbol, int quantity) {
         this(id,symbol, quantity,0.0);
     }
@@ -26,7 +24,10 @@ public abstract class Trade {
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
+        this.tradeDate = LocalDate.now();
+        this.tradeTime = LocalTime.now();
     }
+
     public void setPrice(double price) {
         if (price < 0) {
             System.out.println("Price can only take positive integers");
@@ -35,9 +36,16 @@ public abstract class Trade {
         this.price = price;
     }
 
-
     public double getPrice() {
         return price;
+    }
+
+    public LocalDate getTradeDate() {
+        return tradeDate;
+    }
+
+    public LocalTime getTradeTime() {
+        return tradeTime;
     }
 
     public String toString() {

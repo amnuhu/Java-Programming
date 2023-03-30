@@ -2,7 +2,7 @@ package org.example;
 
 public class Silver extends MembershipType{
 
-    public String toString() {
-        return " Membership Silver";
-    }
+    public static String name = "SILVER";
+    public static int tradePerDay = 10;
+
 }
