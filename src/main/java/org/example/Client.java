@@ -22,6 +22,10 @@ public class Client {
         }
     }
 
+    public void addTrade(Trade trade) {
+
+    }
+
     private void upgradeMember(MembershipType newMembershipType) {
         this.membershipType = newMembershipType;
     }
